@@ -7,7 +7,7 @@ export const Statistics = ({ title, stats }) => {
   return (
     <StyleSheetManager shouldForwardProp={(prop) => prop !== 'backgroundColor'}>
       <SectionStatistics>
-        <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
         <StatList>
           {stats.map((el, _, arr) => {
             return (
